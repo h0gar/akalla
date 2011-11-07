@@ -1,0 +1,98 @@
+.views-view-grid {
+	width:95%;
+}
+.views-view-grid td {
+	text-align:center;
+	padding-bottom:20px;
+}
+.views-view-grid a {
+	border-bottom:0;
+}
+.form-submit {
+	border:1px solid #333;
+	padding:2px;
+}
+.form-submit:hover {
+	cursor:pointer;
+	background-color:#ccc;
+}
+.category-products tbody * {
+	color:#333;
+	border-color:#333;
+}
+.category-products tbody td {
+	padding-right:20px;
+	margin:0 20px 0 0;
+}
+.node-blog-fond {
+	width:95%;
+}
+
+.pics {
+	position:relative;
+	height:270px;
+}
+.pics img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+#header .menu {
+	z-index:2000;
+}
+#header .menu li ul {
+	position:absolute;
+	top:30px;
+	left:0;
+	margin:0;
+	display:none;
+}
+#header .menu li:hover ul, #header .menu li ul:hover {
+	display:block;
+}
+#header .menu li ul li {
+	float:left;
+	clear:both;
+	width:100px;
+}
+#header .menu .expanded {
+	position:relative;
+}
+#header .menu .expanded ul a {
+	padding-left:5px;
+	background-image:none;
+}
+#header .menu .menu {
+	margin-top:0;
+}
+
+#rotator {
+	position:relative;
+}
+.search {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	border:2px solid #000;
+	background-color:#333;
+	opacity:0.8;
+	z-index:5000;
+	padding:8px;
+}
+
+textarea, input, select {
+	border:1px solid #000;
+}
+
+#motioncontainer {
+	width:380px;
+}
+.form-radio {
+	border:0;
+}
+.clear {
+	clear:both;
+}
+#header a {
+	border:0;
+}

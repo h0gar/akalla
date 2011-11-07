@@ -1,0 +1,5 @@
+; $Id$
+name = Custom
+description = My customizations to the site
+package = Custom
+core = 6.x

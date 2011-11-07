@@ -1,0 +1,8 @@
+name = News
+description = Liste de l'ensemble des actualités publiées
+core = 6.x
+package = Custom
+
+//fieldset dans lequel va apparaître le module sur la page
+// contenant la liste des modules (Construction du site > Module)
+// version de Drupal pour laquelle le module est développée

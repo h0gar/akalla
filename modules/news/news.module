@@ -1,0 +1,47 @@
+<?php
+function get_actus_list() {
+	// On récupère la liste des identifiants (nid) des noeuds 
+	$sql = " SELECT n.nid
+	FROM {node} n
+	WHERE type='news' AND status=1
+	ORDER BY n.created DESC";
+	// exécution de la requête
+	$result = db_query(db_rewrite_sql($sql));
+//die(db_rewrite_sql($sql));
+	// les données retournées sont stockées dans le tableau $a_actus
+	$i = 0;
+	while($actu = db_fetch_array($result)) {
+		$a_actus[$i] = node_load($actu['nid']);
+		$i++;
+	}
+	//print_r($a_actus);
+	return theme('actus_list', $a_actus);
+}
+
+/**
+ * Implementation of hook_menu().
+ **/
+function news_menu() {
+	$items = array();
+
+	$items['actualites'] = array(
+		'title' => "Actualités",
+		'page callback' => 'get_actus_list',
+		'access arguments' => array('access content'),
+		'type' => MENU_CALLBACK
+	);
+
+	return $items;
+}
+
+/**
+ * Implementation of hook_theme().
+ **/
+function news_theme() {
+	return array(
+		'actus_list' => array(
+			'template' => 'news',
+			'arguments' => array('actus' => NULL),
+		),
+	);
+}

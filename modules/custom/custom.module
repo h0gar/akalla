@@ -1,0 +1,47 @@
+<?php
+// $Id$
+/**
+* @file
+* Module to hold my customizations to Ubercart
+*/
+
+function custom_views_pre_render (&$view) {
+	if($view->name == 'albums' && count($view->result) == 1) {
+		drupal_goto('node/'.$view->result[0]->nid);
+	}
+//print_r($view);
+//die('fdgfd');
+}
+
+function custom_node_form() {
+	die('fdgdfg');
+}
+
+/**
+* Implementation of hook_form_alter()
+*/
+function custom_form_alter(&$form, &$form_state, $form_id) {
+	if ($form_id == 'product_node_form') {
+		//print_r($form['base']);
+		$form['base']['model']['#required'] = FALSE;
+		$form['base']['prices']['sell_price']['#required'] = FALSE;
+		$form['base']['weight'] = array();
+		$form['base']['dimensions'] = array();
+		$form['base']['prices']['list_price'] = array();
+		$form['base']['prices']['cost'] = array();
+		$form['base']['shippable'] = array();
+		$form['base']['pkg_qty'] = array();
+		$form['base']['default_qty'] = array();
+		$form['base']['ordering'] = array();
+		$form['base']['model'] = array();
+	}
+}
+/*
+function ubercart_changes_theme() {
+  return array(
+    'block' => array(
+      'template' => 'block',
+      'parameters' => array('variables' => NULL),
+    ),
+  );
+}*/

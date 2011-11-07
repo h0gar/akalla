@@ -1,0 +1,39 @@
+27/11/2010
+-copy files
+-copy french files	http://ftp.drupal.org/files/translations/6.x/drupal/drupal-6.19.fr.po
+-set up DB
+
+_unitqdatabase_
+_sitename_
+email@unitq.fr
+_unitqusername_
+admin@unitq.fr
+_unitqpassword_
+
+_basicutilisateur_
+basicuser@unitq.fr
+_basicpassword_
+
+DID
+-theme admin
+-installer ckeditor	http://drupal.org/project/ckeditor
+-installer image upload	http://drupal.org/project/wysiwyg_imageupload
+	plutot	http://drupal.org/project/imce
+-modifier format d'entree
+-nettoyer modules
+-nettoyer themes
+-Creer user de base
+-autorisations
+-redirection login
+-nettoyer type de contenus
+-basic menu
+
+TODO
+-refaire menu navigation pour basic user
+-ajouter module statistiques, newsletter?, ..
+-frontpage
+(-traduire)
+-remove credits
+x-empecher creation de nouveaux comptes?
+
+-update drupal

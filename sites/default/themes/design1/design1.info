@@ -1,0 +1,25 @@
+; design1
+name = design1
+description = Design1
+version = VERSION
+core = 6.x
+engine = phptemplate
+
+; Information added by drupal.org packaging script on 2010-08-11
+version = "1.00"
+project = "drupal"
+datestamp = "1281559292"
+
+scripts[] = common/jquery.js
+scripts[] = common/jquery.curvycorners.min.js
+scripts[] = common/jqFancyTransitions.js
+stylesheets[all][] = common/style.css
+stylesheets[all][] = style.css
+
+regions[header] = Header
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[footer] = Footer
+regions[rotator] = Rotator
+regions[top] = top
